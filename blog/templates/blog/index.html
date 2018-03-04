@@ -17,9 +17,9 @@
                         <div class="row">
                             <div class="col">
                                 {% if post.content_type == 'DOCUMENT' %}
-                                    <a href="#" class="btn btn-primary">Read</a>
+                                    <a href="{% url 'blog:detail' post.pk %}" class="btn btn-primary">Read</a>
                                 {% elif post.content_type == 'VIDEO' %}
-                                    <a href="#" class="btn btn-success">Watch</a>
+                                    <a href="{% url 'blog:detail' post.pk %}" class="btn btn-success">Watch</a>
                                 {% endif %}
                             </div>
                             <div class="col text-right">
