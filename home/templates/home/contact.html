@@ -1,9 +1,12 @@
 {% extends 'home/base.html' %}
 
-{% block title %}Contact Brian{% endblock %}
+{% block page_title %}{{ block.super }} Contact{% endblock %}
+
+{% block nav_identifier %}
+    <div class="nav-identifier" data-href="{% url 'home:contact' %}"></div>
+{% endblock %}
 
 {% block content %}
-
     <div class="jumbotron bg-light-gradient border-0">
         <div class="container">
             <div class="row">
@@ -22,5 +25,4 @@
             </div>
         </div>
     </div>
-
 {% endblock %}

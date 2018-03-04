@@ -1,9 +1,12 @@
 {% extends 'home/base.html' %}
 
-{% block title %}Brian's Blog{% endblock %}
+{% block page_title %}{{ block.super }} Blog{% endblock %}
+
+{% block nav_identifier %}
+    <div class="nav-identifier" data-href="{% url 'blog:index' %}"></div>
+{% endblock %}
 
 {% block content %}
-
     <div class="container">
         <div class="row mt-5">
             <div class="card mx-auto" style="width: 28rem;">
@@ -44,5 +47,4 @@
             </div>
         </div>
     </div>
-
 {% endblock %}
