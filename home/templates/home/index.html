@@ -1,0 +1,41 @@
+{% extends 'home/base.html' %}
+
+{% block title %}BJones Tech{% endblock %}
+
+{% block content %}
+
+    <div class="jumbotron jumbotron-fluid bg-light-gradient">
+        <div class="container">
+            <div class="row">
+                <div class="col-8 offset-2">
+                    <h1 class="text-dark text-center pb-4">Automating Better Experiences</h1>
+                    <h2 class="text-dark text-center" style="font-weight: 200;">...and sharing with you</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <ul class="nav justify-content-center">
+            <li class="nav-item">
+                <a class="nav-link btn btn-primary m-3" style="width: 12rem;" href="{% url 'home:about' %}">
+                    <i class="fas fa-user fa-2x align-middle"></i>
+                    <span class="pl-3 align-middle h5 font-weight-light">About</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link btn btn-primary m-3" style="width: 12rem;" href="#">
+                    <i class="fas fa-pencil-alt fa-2x align-middle"></i>
+                    <span class="pl-3 align-middle h5 font-weight-light">Blog</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link btn btn-primary m-3" style="width: 12rem;" href="{% url 'home:contact' %}">
+                    <i class="far fa-envelope fa-2x align-middle"></i>
+                    <span class="pl-3 align-middle h5 font-weight-light">Contact</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+{% endblock %}
