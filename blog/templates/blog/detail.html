@@ -7,20 +7,28 @@
 {% endblock %}
 
 {% block content %}
-    <div class="jumbotron bg-light-gradient">
-        <div class="container">
-            <div class="row">
-                <div class="col-8 offset-2">
-                    <h1 class="text-dark">{{ post.title }}</h1>
+    {% if post.content_type == "DOCUMENT" %}
+        <div class="jumbotron bg-light-gradient">
+            <div class="container">
+                <div class="row">
+                    <div class="col-8 offset-2">
+                        <h1 class="text-dark">{{ post.title }}</h1>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+    {% elif post.content_type == "VIDEO" %}
+        <div class="mb-4">
+            <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+                <h6 class="text-white font-weight-light mt-1 mx-0">{{ post.title }}</h6>
+            </nav>
+        </div>
+    {% endif %}
 
     <div class="container">
         <div class="row">
             <div class="col-8 offset-2">
-                <p>{{ post.content|safe }}</p>
+                <p class="mt-1234">{{ post.content|safe }}</p>
             </div>
         </div>
     </div>
