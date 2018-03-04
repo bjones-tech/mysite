@@ -7,7 +7,7 @@
 {% endblock %}
 
 {% block content %}
-    <div class="jumbotron bg-light-gradient border-0">
+    <div class="jumbotron bg-light-gradient">
         <div class="container">
             <div class="row">
                 <div class="col-8 offset-2">
@@ -17,12 +17,15 @@
         </div>
     </div>
 
-    <div class="container">
-        <div class="row">
-            <div class="col-8 offset-2">
-                <h2 class="text-dark text-center p-4" style="font-weight: 600;">brian<i class="fas fa-at text-info"></i>bjones.tech
-                </h2>
+    {% with email_alias="brian" email_domain="bjones.tech" %}
+        <div class="container">
+            <div class="row">
+                <div class="col-8 offset-2">
+                    <h2 class="text-dark text-center p-4" style="font-weight: 600;">
+                        {{ email_alias }}<i class="fas fa-at text-info"></i>{{ email_domain }}
+                    </h2>
+                </div>
             </div>
         </div>
-    </div>
+    {% endwith %}
 {% endblock %}
