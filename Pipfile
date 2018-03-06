@@ -9,6 +9,8 @@ name = "pypi"
 
 django = "==2.0.2"
 pytz = "==2018.3"
+gunicorn = "*"
+django-heroku = "*"
 
 
 [dev-packages]
@@ -17,4 +19,4 @@ pytz = "==2018.3"
 
 [requires]
 
-python_version = "3.6"
+python_version = "3.6.4"
