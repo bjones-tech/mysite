@@ -1,9 +1,15 @@
 {% extends 'home/base.html' %}
 
+{% load static %}
+
 {% block page_title %}{% endblock %}
 
 {% block content %}
-    <div class="jumbotron jumbotron-fluid bg-white">
+    <div class="bg-img">
+        <img src="{% static 'home/img/index-background.png' %}" alt="">
+    </div>
+
+    <div class="jumbotron" style="background: rgba(255, 255, 255, .75);">
         <div class="container">
             <div class="row">
                 <div class="col-8 offset-2">
