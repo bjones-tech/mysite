@@ -11,8 +11,7 @@ class Post(models.Model):
     description = models.CharField(max_length=200)
     content = models.TextField()
     content_type = models.CharField(max_length=200, choices=CONTENT_TYPE_CHOICES, default='DOCUMENT')
-    published = models.BooleanField(default=False)
-    created = models.DateTimeField(auto_now_add=True)
+    publish_date = models.DateTimeField(null=True, blank=True)
 
     def __str__(self):
         return self.title
