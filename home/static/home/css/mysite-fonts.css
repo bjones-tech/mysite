@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css?family=Kalam:300,400|Poppins');
+
+.poppins-font {
+    font-family: "Poppins", sans-serif;
+}
+
+.kalam-font {
+    font-family: "Kalam", sans-serif;
+}
+
+.bg-light-gradient h1 {
+    font-family: "Kalam", sans-serif;
+    font-weight: 300;
+}
