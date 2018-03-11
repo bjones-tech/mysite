@@ -1,3 +1,21 @@
-## My Personal Website
+This repository contains the source code for my personal website.
 
-http://www.bjones.tech
+Please visit at [http://www.bjones.tech](http://www.bjones.tech)
+
+## Features
+
+#### Main Site
+
+* About
+* Blog
+* Contact
+
+#### Admin Site
+
+* Blog content management
+
+## Tools and Materials
+
+* PyCharm IDE
+* Django web framework
+* Bootstrap front-end library
