@@ -13,6 +13,7 @@ Please visit at [http://www.bjones.tech](http://www.bjones.tech)
 #### Admin Site
 
 * Blog content management
+* Protected from brute force login attempts
 
 ## Tools and Materials
 

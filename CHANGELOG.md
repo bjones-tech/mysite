@@ -2,11 +2,14 @@
 
 #### Unreleased
 
-* Password security
 * Site analytics
 * Portfolio
 * Portfolio content management
 * Rich text editor fields for content properties
+
+#### 2.0.0
+
+* `Added` django-axes for admin password security
 
 #### 1.1.0
 
