@@ -11,6 +11,7 @@ django = "==2.0.2"
 pytz = "==2018.3"
 gunicorn = "*"
 django-heroku = "*"
+django-axes = "*"
 
 
 [dev-packages]

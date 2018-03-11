@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "8fcb084c717ab5a49037cf77b97ae7158690bf2fd00c0a1f55691a53f022c7f5"
+            "sha256": "5e80b44460500f2c62c5f999a80d5569487249dbd9e18dcbf09e4339ada92191"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -30,12 +30,32 @@
             ],
             "version": "==2.0.2"
         },
+        "django-appconf": {
+            "hashes": [
+                "sha256:6a4d9aea683b4c224d97ab8ee11ad2d29a37072c0c6c509896dd9857466fb261",
+                "sha256:ddab987d14b26731352c01ee69c090a4ebfc9141ed223bef039d79587f22acd9"
+            ],
+            "version": "==1.0.2"
+        },
+        "django-axes": {
+            "hashes": [
+                "sha256:563882a99deb67e826575152ab8caa3b77e15bc3298a7a44674fba587d57fbc0",
+                "sha256:719c2fc8ea4d6a20300f474ba4cbd772599f6849a07a006ba2f2155813fbe713"
+            ],
+            "version": "==4.1.0"
+        },
         "django-heroku": {
             "hashes": [
                 "sha256:2bc690aab89eedbe01311752320a9a12e7548e3b0ed102681acc5736a41a4762",
                 "sha256:6af4bc3ae4a9b55eaad6dbe5164918982d2762661aebc9f83d9fa49f6009514e"
             ],
             "version": "==0.3.1"
+        },
+        "django-ipware": {
+            "hashes": [
+                "sha256:3fba8821298c8533ce5609debf31dc8a22f228c50e100f42d97637a9f9357d43"
+            ],
+            "version": "==2.0.1"
         },
         "gunicorn": {
             "hashes": [
