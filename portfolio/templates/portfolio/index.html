@@ -1,0 +1,26 @@
+{% extends 'home/base.html' %}
+
+{% block page_title %}{{ block.super }} Portfolio{% endblock %}
+
+{% block nav_identifier %}
+    <div class="nav-identifier" data-href="{% url 'portfolio:index' %}"></div>
+{% endblock %}
+
+{% block content %}
+    <div class="container mt-5">
+        {% for solution in solutions %}
+            <div class="row mb-5">
+                <div class="card mx-auto" style="width: 32rem">
+                    {% if solution.featured %}
+                        <h5 class="card-header bg-light-gradient">Featured</h5>
+                    {% endif %}
+                    <div class="card-body">
+                        <h3 class="card-title poppins-font">{{ solution.title }}</h3>
+                        <p class="card-text font-weight-light text-secondary">{{ solution.description }}</p>
+                        <a href="#" class="btn btn-primary">Details</a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}
