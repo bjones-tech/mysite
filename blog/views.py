@@ -10,6 +10,6 @@ def index(request):
     return render(request, 'blog/index.html', {'posts': published_posts})
 
 
-def detail(request, post_id):
+def post_detail(request, post_id):
     post = get_object_or_404(Post, pk=post_id)
-    return render(request, 'blog/detail.html', {'post': post})
+    return render(request, 'blog/post_detail.html', {'post': post})
