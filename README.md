@@ -7,11 +7,13 @@ Please visit at [http://www.bjones.tech](http://www.bjones.tech)
 #### Main Site
 
 * About
+* Portfolio
 * Blog
 * Contact
 
 #### Admin Site
 
+* Portfolio content management
 * Blog content management
 * Protected from brute force login attempts
 
@@ -20,3 +22,4 @@ Please visit at [http://www.bjones.tech](http://www.bjones.tech)
 * PyCharm IDE
 * Django web framework
 * Bootstrap front-end library
+* django-axes login monitoring
