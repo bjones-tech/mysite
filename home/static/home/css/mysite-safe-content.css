@@ -1,0 +1,21 @@
+.safe-content h4,
+.safe-content h5,
+.safe-content h6 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.safe-content p,
+.safe-content li {
+    padding-top: .2rem;
+    padding-bottom: .2rem;
+}
+
+.safe-content li {
+    font-size: .8rem;
+}
+
+.safe-content hr {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
