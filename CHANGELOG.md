@@ -4,6 +4,8 @@
 
 * Site analytics
 * Rich text editor fields for content properties
+* Portfolio tags
+* About content management
 
 #### 3.0.0
 
