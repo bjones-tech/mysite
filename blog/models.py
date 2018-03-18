@@ -1,3 +1,4 @@
+from ckeditor.fields import RichTextField
 from django.db import models
 
 
@@ -9,7 +10,7 @@ class Post(models.Model):
 
     title = models.CharField(max_length=200)
     description = models.CharField(max_length=200)
-    content = models.TextField()
+    content = RichTextField()
     content_type = models.CharField(max_length=200, choices=CONTENT_TYPE_CHOICES, default='DOCUMENT')
     publish_date = models.DateTimeField(null=True, blank=True)
 
