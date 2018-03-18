@@ -15,6 +15,7 @@ Please visit at [http://www.bjones.tech](http://www.bjones.tech)
 
 * Portfolio content management
 * Blog content management
+* Create and edit content using rich text editor
 * Protected from brute force login attempts
 
 ## Tools and Materials
@@ -23,3 +24,4 @@ Please visit at [http://www.bjones.tech](http://www.bjones.tech)
 * Django web framework
 * Bootstrap front-end library
 * django-axes login monitoring
+* django-ckeditor rich text editor

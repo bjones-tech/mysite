@@ -3,9 +3,12 @@
 #### Unreleased
 
 * Site analytics
-* Rich text editor fields for content properties
-* Portfolio tags
 * About content management
+
+#### 4.0.0
+
+* `Added` django-ckeditor for rich text content fields
+* `Added` portfolio tags
 
 #### 3.0.0
 
