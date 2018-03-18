@@ -12,6 +12,7 @@ pytz = "==2018.3"
 gunicorn = "*"
 django-heroku = "*"
 django-axes = "*"
+django-ckeditor = "*"
 
 
 [dev-packages]
