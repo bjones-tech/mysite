@@ -13,4 +13,6 @@ $(document).ready(function(){
     }
 
     SetActiveNavLink();
+
+    $('[data-toggle="tooltip"]').tooltip();
 });

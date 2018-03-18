@@ -11,8 +11,21 @@
         {% for solution in solutions %}
             <div class="row mb-5">
                 <div class="card mx-auto" style="width: 32rem">
-                    {% if solution.featured %}
-                        <h5 class="card-header bg-light-gradient">Featured</h5>
+                    {% if solution.tags.all %}
+                        <div class="card-header border-top-0 bg-white pb-1">
+                            {% for tag in solution.tags.all %}
+                                {% if tag.category == "LANGUAGE" %}
+                                    <div class="btn btn-sm btn-outline-info mb-2" data-toggle="tooltip"
+                                         title="{{ tag.category }}">{{ tag.name }}</div>
+                                {% elif tag.category == "FRAMEWORK" %}
+                                    <div class="btn btn-sm btn-outline-success mb-2" data-toggle="tooltip"
+                                         title="{{ tag.category }}">{{ tag.name }}</div>
+                                {% elif tag.category == "INTEGRATION" %}
+                                    <div class="btn btn-sm btn-outline-warning mb-2" data-toggle="tooltip"
+                                         title="{{ tag.category }}">{{ tag.name }}</div>
+                                {% endif %}
+                            {% endfor %}
+                        </div>
                     {% endif %}
                     <div class="card-body">
                         <h3 class="card-title poppins-font">{{ solution.title }}</h3>
