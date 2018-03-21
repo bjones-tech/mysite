@@ -17,7 +17,6 @@ import django_heroku
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.0/howto/deployment/checklist/
 
@@ -28,7 +27,6 @@ SECRET_KEY = '80+mg5@@%5qn793#ojt0k1d*1-vv*@e+-7!0ii4qkhbxlp8ecl'
 DEBUG = False
 
 ALLOWED_HOSTS = []
-
 
 # Application definition
 
@@ -76,7 +74,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'mysite.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
 
@@ -86,7 +83,6 @@ DATABASES = {
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/2.0/ref/settings/#auth-password-validators
@@ -106,7 +102,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/2.0/topics/i18n/
 
@@ -120,13 +115,10 @@ USE_L10N = True
 
 USE_TZ = True
 
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
 STATIC_URL = '/static/'
-
-django_heroku.settings(locals())
 
 # Caches (DummyCache required for Axes)
 # https://django-axes.readthedocs.io/en/latest/configuration.html
@@ -141,3 +133,24 @@ CACHES = {
 }
 
 AXES_CACHE = 'axes_cache'
+
+# CKEditor configuration
+# https://django-ckeditor.readthedocs.io/en/latest/#
+
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar_Basic': [
+            {'name': 'styles', 'items': ['Styles', 'Format']},
+            {'name': 'basicstyles', 'items': ['Bold', 'Italic', 'Underline']},
+            {'name': 'paragraph', 'items': ['NumberedList', 'BulletedList', '-', 'Outdent', 'Indent']},
+            {'name': 'tools', 'items': ['Preview', 'Maximize', 'ShowBlocks', '-', 'Source']},
+        ],
+        'toolbar': 'Basic',
+        'tabSpaces': 4,
+    }
+}
+
+# Heroku configuration
+# https://devcenter.heroku.com/articles/django-app-configuration
+
+django_heroku.settings(locals())
