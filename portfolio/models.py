@@ -15,6 +15,9 @@ class Tag(models.Model):
     def __str__(self):
         return self.name
 
+    class Meta:
+        ordering = ['category', 'name']
+
 
 class Solution(models.Model):
     title = models.CharField(max_length=200)
