@@ -4,6 +4,13 @@
 
 * Site analytics
 * About content management
+* Image files management
+
+#### 4.1.0
+
+* `Updated` django-ckeditor toolbar options
+* `Updated` tag selection admin interface for solutions
+* `Updated` portfolio tag ordering
 
 #### 4.0.0
 
