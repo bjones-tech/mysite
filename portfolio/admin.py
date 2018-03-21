@@ -9,6 +9,7 @@ class TagAdmin(admin.ModelAdmin):
 
 class SolutionAdmin(admin.ModelAdmin):
     list_display = ['title', 'release_date', 'featured']
+    filter_horizontal = ['tags']
 
 
 admin.site.register(Tag, TagAdmin)
