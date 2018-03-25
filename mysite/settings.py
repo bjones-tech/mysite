@@ -26,7 +26,7 @@ SECRET_KEY = '80+mg5@@%5qn793#ojt0k1d*1-vv*@e+-7!0ii4qkhbxlp8ecl'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 # Application definition
 
@@ -118,12 +118,13 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
-STATIC_URL = '/static/'
+if DEBUG:
+    STATIC_URL = '/static/'
 
-MEDIA_ROOT = os.path.join(BASE_DIR, 'mediafiles')
-MEDIA_URL = '/media/'
+    MEDIA_ROOT = os.path.join(BASE_DIR, 'mediafiles')
+    MEDIA_URL = '/media/'
 
-os.makedirs(MEDIA_ROOT, exist_ok=True)
+    os.makedirs(MEDIA_ROOT, exist_ok=True)
 
 # Caches (DummyCache required for Axes)
 # https://django-axes.readthedocs.io/en/latest/configuration.html
@@ -161,4 +162,5 @@ CKEDITOR_CONFIGS = {
 # Heroku configuration
 # https://devcenter.heroku.com/articles/django-app-configuration
 
-django_heroku.settings(locals())
+if not DEBUG:
+    django_heroku.settings(locals())
