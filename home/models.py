@@ -1,4 +1,5 @@
 from django.db import models
+from django.utils.html import format_html
 
 
 class Image(models.Model):
@@ -9,3 +10,6 @@ class Image(models.Model):
 
     def url(self):
         return self.file.url
+
+    def thumbnail(self):
+        return format_html('<img src="{}" height="150px">', self.file.url)
