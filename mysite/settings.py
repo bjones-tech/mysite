@@ -41,7 +41,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'axes',
-    'ckeditor'
+    'ckeditor',
+    'storages'
 ]
 
 MIDDLEWARE = [
@@ -115,10 +116,27 @@ USE_L10N = True
 
 USE_TZ = True
 
-# Static files (CSS, JavaScript, Images)
+# Static files + S3 Storage (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
+# http://django-storages.readthedocs.io/en/latest/
 
-if DEBUG:
+if not DEBUG:
+    AWS_ACCESS_KEY_ID = os.environ['AWS_ACCESS_KEY_ID']
+    AWS_SECRET_ACCESS_KEY = os.environ['AWS_SECRET_ACCESS_KEY']
+    AWS_STORAGE_BUCKET_NAME = os.environ['AWS_STORAGE_BUCKET_NAME']
+    AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
+
+    AWS_S3_OBJECT_PARAMETERS = {
+        'CacheControl': 'max-age=86400',
+    }
+
+    AWS_LOCATION = 'static'
+
+    STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+    STATIC_URL = "https://%s/%s/" % (AWS_S3_CUSTOM_DOMAIN, AWS_LOCATION)
+
+    DEFAULT_FILE_STORAGE = 'mysite.storage_backends.MediaStorage'
+else:
     STATIC_URL = '/static/'
 
     MEDIA_ROOT = os.path.join(BASE_DIR, 'mediafiles')
@@ -163,4 +181,4 @@ CKEDITOR_CONFIGS = {
 # https://devcenter.heroku.com/articles/django-app-configuration
 
 if not DEBUG:
-    django_heroku.settings(locals())
+    django_heroku.settings(locals(), staticfiles=False)
