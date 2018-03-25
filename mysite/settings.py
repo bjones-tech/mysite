@@ -147,7 +147,10 @@ CKEDITOR_CONFIGS = {
         'toolbar_Basic': [
             {'name': 'styles', 'items': ['Styles', 'Format']},
             {'name': 'basicstyles', 'items': ['Bold', 'Italic', 'Underline']},
-            {'name': 'paragraph', 'items': ['NumberedList', 'BulletedList', '-', 'Outdent', 'Indent']},
+            {'name': 'paragraph',
+             'items': ['NumberedList', 'BulletedList', '-', 'JustifyLeft', 'JustifyCenter', 'JustifyRight', '-',
+                       'Outdent', 'Indent']},
+            {'name': 'insert', 'items': ['Image', 'Iframe']},
             {'name': 'tools', 'items': ['Preview', 'Maximize', 'ShowBlocks', '-', 'Source']},
         ],
         'toolbar': 'Basic',
