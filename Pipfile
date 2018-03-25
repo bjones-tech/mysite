@@ -13,6 +13,7 @@ gunicorn = "*"
 django-heroku = "*"
 django-axes = "*"
 django-ckeditor = "*"
+pillow = "*"
 
 
 [dev-packages]
