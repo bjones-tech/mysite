@@ -120,6 +120,11 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+MEDIA_ROOT = os.path.join(BASE_DIR, 'mediafiles')
+MEDIA_URL = '/media/'
+
+os.makedirs(MEDIA_ROOT, exist_ok=True)
+
 # Caches (DummyCache required for Axes)
 # https://django-axes.readthedocs.io/en/latest/configuration.html
 
