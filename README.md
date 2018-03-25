@@ -15,6 +15,7 @@ Please visit at [http://www.bjones.tech](http://www.bjones.tech)
 
 * Portfolio content management
 * Blog content management
+* Image files management
 * Create and edit content using rich text editor
 * Protected from brute force login attempts
 
@@ -22,6 +23,9 @@ Please visit at [http://www.bjones.tech](http://www.bjones.tech)
 
 * PyCharm IDE
 * Django web framework
+* Heroku Platform hosting
+* Heroku Postgres database
+* Amazon S3 storage
 * Bootstrap front-end library
 * django-axes login monitoring
 * django-ckeditor rich text editor

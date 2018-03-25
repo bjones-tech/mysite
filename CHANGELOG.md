@@ -4,7 +4,11 @@
 
 * Site analytics
 * About content management
-* Image files management
+
+#### 5.0.0
+
+* `Added` Image files management
+* `Added` S3 storage for static and media files
 
 #### 4.1.0
 
