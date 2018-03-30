@@ -168,6 +168,7 @@ CKEDITOR_CONFIGS = {
             {'name': 'basicstyles', 'items': ['Bold', 'Italic', 'Underline']},
             {'name': 'paragraph', 'items': ['NumberedList', 'BulletedList', '-', 'Outdent', 'Indent']},
             {'name': 'justify', 'items': ['JustifyLeft', 'JustifyCenter', 'JustifyRight']},
+            {'name': 'links', 'items': ['Link', 'Unlink']},
             {'name': 'insert', 'items': ['Image', 'Iframe']},
             {'name': 'tools', 'items': ['Preview', 'Maximize', 'ShowBlocks', '-', 'Source']},
         ],
