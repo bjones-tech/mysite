@@ -5,6 +5,11 @@
 * Site analytics
 * About content management
 
+#### 5.0.1
+
+* `Updated` django-ckeditor toolbar with link items
+* `Reverted` static file storage (media files still use S3)
+
 #### 5.0.0
 
 * `Added` Image files management
