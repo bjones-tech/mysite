@@ -120,6 +120,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 # http://django-storages.readthedocs.io/en/latest/
 
+STATIC_URL = '/static/'
+
 if not DEBUG:
     AWS_ACCESS_KEY_ID = os.environ['AWS_ACCESS_KEY_ID']
     AWS_SECRET_ACCESS_KEY = os.environ['AWS_SECRET_ACCESS_KEY']
@@ -130,15 +132,13 @@ if not DEBUG:
         'CacheControl': 'max-age=86400',
     }
 
-    AWS_LOCATION = 'static'
+    AWS_LOCATION = 'media'
+    AWS_S3_FILE_OVERWRITE = False
 
-    STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
-    STATIC_URL = "https://%s/%s/" % (AWS_S3_CUSTOM_DOMAIN, AWS_LOCATION)
+    DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
-    DEFAULT_FILE_STORAGE = 'mysite.storage_backends.MediaStorage'
+    MEDIA_URL = "https://%s/%s/" % (AWS_S3_CUSTOM_DOMAIN, AWS_LOCATION)
 else:
-    STATIC_URL = '/static/'
-
     MEDIA_ROOT = os.path.join(BASE_DIR, 'mediafiles')
     MEDIA_URL = '/media/'
 
@@ -181,4 +181,4 @@ CKEDITOR_CONFIGS = {
 # https://devcenter.heroku.com/articles/django-app-configuration
 
 if not DEBUG:
-    django_heroku.settings(locals(), staticfiles=False)
+    django_heroku.settings(locals())
