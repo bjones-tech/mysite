@@ -30,7 +30,10 @@
                     <div class="card-body">
                         <h3 class="card-title poppins-font">{{ solution.title }}</h3>
                         <p class="card-text pb-3 font-weight-light text-secondary">{{ solution.description }}</p>
-                        <a href="{% url 'portfolio:solution_detail' solution.pk %}" class="btn btn-primary">Details</a>
+                        {% if not solution.description_only %}
+                            <a href="{% url 'portfolio:solution_detail' solution.pk %}"
+                               class="btn btn-primary">Details</a>
+                        {% endif %}
                     </div>
                 </div>
             </div>
