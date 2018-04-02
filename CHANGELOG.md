@@ -5,6 +5,11 @@
 * Site analytics
 * About content management
 
+#### 5.1.0
+
+* `Added` description only option for solutions 
+* `Removed` details button for description only solutions
+
 #### 5.0.1
 
 * `Updated` django-ckeditor toolbar with link items
