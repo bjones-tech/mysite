@@ -5,9 +5,13 @@
 * Site analytics
 * About content management
 
+#### 5.1.1
+
+* `Fixed` title in solution_detail template
+
 #### 5.1.0
 
-* `Added` description only option for solutions 
+* `Added` description only option for solutions
 * `Removed` details button for description only solutions
 
 #### 5.0.1
