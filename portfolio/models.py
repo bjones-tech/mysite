@@ -25,6 +25,7 @@ class Solution(models.Model):
     content = RichTextField()
     release_date = models.DateField()
     featured = models.BooleanField(default=False)
+    description_only = models.BooleanField(default=False)
     tags = models.ManyToManyField(Tag)
 
     def __str__(self):
