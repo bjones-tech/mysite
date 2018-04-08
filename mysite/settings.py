@@ -68,6 +68,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'home.context_processors.app_settings',
             ],
         },
     },
@@ -176,6 +177,11 @@ CKEDITOR_CONFIGS = {
         'tabSpaces': 4,
     }
 }
+
+# Google Analytics
+# https://www.google.com/analytics
+
+GA_TRACKING_ID = os.environ.setdefault('GA_TRACKING_ID', '')
 
 # Heroku configuration
 # https://devcenter.heroku.com/articles/django-app-configuration
