@@ -18,6 +18,21 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
         <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
         <script src="{% static 'home/js/mysite.js' %}"></script>
+
+        {% if GA_TRACKING_ID %}
+            <script async src="https://www.googletagmanager.com/gtag/js?id={{ GA_TRACKING_ID }}"></script>
+            <script>
+                window.dataLayer = window.dataLayer || [];
+
+                function gtag() {
+                    dataLayer.push(arguments);
+                }
+
+                gtag('js', new Date());
+
+                gtag('config', '{{ GA_TRACKING_ID }}');
+            </script>
+        {% endif %}
     </head>
 
     <body>
