@@ -26,6 +26,7 @@ Please visit at [http://www.bjones.tech](http://www.bjones.tech)
 * Heroku Platform hosting
 * Heroku Postgres database
 * Amazon S3 storage
+* Google Analytics
 * Bootstrap front-end library
 * django-axes login monitoring
 * django-ckeditor rich text editor

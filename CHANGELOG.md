@@ -2,8 +2,11 @@
 
 #### Unreleased
 
-* Site analytics
 * About content management
+
+#### 6.0.0
+
+* `Added` Google Analytics global site tag
 
 #### 5.1.1
 
