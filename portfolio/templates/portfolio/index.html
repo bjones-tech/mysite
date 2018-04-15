@@ -7,36 +7,55 @@
 {% endblock %}
 
 {% block content %}
-    <div class="container mt-5">
-        {% for solution in solutions %}
-            <div class="row mb-5">
-                <div class="card mx-auto" style="width: 32rem">
-                    {% if solution.tags.all %}
-                        <div class="card-header border-top-0 bg-white pb-1">
-                            {% for tag in solution.tags.all %}
-                                {% if tag.category == "LANGUAGE" %}
-                                    <div class="btn btn-sm btn-outline-info mb-2" data-toggle="tooltip"
-                                         title="{{ tag.category }}">{{ tag.name }}</div>
-                                {% elif tag.category == "FRAMEWORK" %}
-                                    <div class="btn btn-sm btn-outline-success mb-2" data-toggle="tooltip"
-                                         title="{{ tag.category }}">{{ tag.name }}</div>
-                                {% elif tag.category == "INTEGRATION" %}
-                                    <div class="btn btn-sm btn-outline-warning mb-2" data-toggle="tooltip"
-                                         title="{{ tag.category }}">{{ tag.name }}</div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="container mt-5">
+                    {% for solution in solutions %}
+                        <div class="row mb-5">
+                            <div class="card mx-auto" style="width: 32rem">
+                                {% if solution.tags.all %}
+                                    <div class="card-header border-top-0 bg-white pb-1">
+                                        {% for tag in solution.tags.all %}
+                                            {% if tag.category == "LANGUAGE" %}
+                                                <div class="btn btn-sm btn-outline-info mb-2" data-toggle="tooltip"
+                                                     title="{{ tag.category }}">{{ tag.name }}</div>
+                                            {% elif tag.category == "FRAMEWORK" %}
+                                                <div class="btn btn-sm btn-outline-success mb-2" data-toggle="tooltip"
+                                                     title="{{ tag.category }}">{{ tag.name }}</div>
+                                            {% elif tag.category == "INTEGRATION" %}
+                                                <div class="btn btn-sm btn-outline-warning mb-2" data-toggle="tooltip"
+                                                     title="{{ tag.category }}">{{ tag.name }}</div>
+                                            {% endif %}
+                                        {% endfor %}
+                                    </div>
                                 {% endif %}
-                            {% endfor %}
+                                <div class="card-body">
+                                    <h3 class="card-title poppins-font">{{ solution.title }}</h3>
+                                    <p class="card-text pb-3 font-weight-light text-secondary">{{ solution.description }}</p>
+                                    {% if not solution.description_only %}
+                                        <a href="{% url 'portfolio:solution_detail' solution.pk %}"
+                                           class="btn btn-primary">Details</a>
+                                    {% endif %}
+                                </div>
+                            </div>
                         </div>
-                    {% endif %}
-                    <div class="card-body">
-                        <h3 class="card-title poppins-font">{{ solution.title }}</h3>
-                        <p class="card-text pb-3 font-weight-light text-secondary">{{ solution.description }}</p>
-                        {% if not solution.description_only %}
-                            <a href="{% url 'portfolio:solution_detail' solution.pk %}"
-                               class="btn btn-primary">Details</a>
-                        {% endif %}
-                    </div>
+                    {% endfor %}
                 </div>
             </div>
-        {% endfor %}
+            <div class="col-md-3">
+                <h5 class="mt-5 mb-4">Tags</h5>
+                <ul class="list-group">
+                    {% for tag in tags|dictsortreversed:"count" %}
+                        {% if tag.count > 0 %}
+                            <li class="list-group-item">
+                                <span>{{ tag }}</span>
+                                <span class="badge badge-pill badge-secondary float-right">{{ tag.count }}</span>
+                            </li>
+                        {% endif %}
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
     </div>
 {% endblock %}
