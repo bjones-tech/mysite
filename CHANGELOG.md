@@ -4,6 +4,10 @@
 
 * About content management
 
+#### 7.0.0
+
+* `Added` Tag filter for portfolio page
+
 #### 6.0.0
 
 * `Added` Google Analytics global site tag
