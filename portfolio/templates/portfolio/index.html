@@ -44,17 +44,23 @@
                 </div>
             </div>
             <div class="col-md-3">
-                <h5 class="mt-5 mb-4">Tags</h5>
-                <ul class="list-group">
+                <h4 class="mt-5 mb-4">Tag Filter
+                    <a href="{% url 'portfolio:index' %}" class="btn btn-sm btn-link float-right">Clear</a></h4>
+                <div class="list-group">
                     {% for tag in tags|dictsortreversed:"count" %}
                         {% if tag.count > 0 %}
-                            <li class="list-group-item">
-                                <span>{{ tag }}</span>
-                                <span class="badge badge-pill badge-secondary float-right">{{ tag.count }}</span>
-                            </li>
+                            {% if tag.id == tag_id %}
+                                <a href="{% url 'portfolio:filtered_index' tag.id %}"
+                                   class="list-group-item text-dark bg-info">
+                            {% else %}
+                                <a href="{% url 'portfolio:filtered_index' tag.id %}" class="list-group-item text-dark">
+                            {% endif %}
+                        <span>{{ tag }}</span>
+                        <span class="badge badge-pill badge-secondary float-right">{{ tag.count }}</span>
+                        </a>
                         {% endif %}
                     {% endfor %}
-                </ul>
+                </div>
             </div>
         </div>
     </div>

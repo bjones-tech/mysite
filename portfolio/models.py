@@ -33,3 +33,6 @@ class Solution(models.Model):
 
     def __str__(self):
         return self.title
+
+    class Meta:
+        ordering = ['-featured', 'description_only', '-release_date']
