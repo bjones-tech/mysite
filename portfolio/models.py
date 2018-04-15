@@ -15,6 +15,9 @@ class Tag(models.Model):
     def __str__(self):
         return self.name
 
+    def count(self):
+        return self.solution_set.count()
+
     class Meta:
         ordering = ['category', 'name']
 
