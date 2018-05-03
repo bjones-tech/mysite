@@ -1,6 +1,7 @@
 .DS_Store
 .idea/
 venv/
+scss/
 staticfiles/
 mediafiles/
 db.sqlite3
