@@ -26,6 +26,11 @@
                     </h2>
                 </div>
             </div>
+            {% for content_row in content_rows %}
+                <div class="row">
+                    {{ content_row.content|safe }}
+                </div>
+            {% endfor %}
         </div>
     {% endwith %}
 {% endblock %}

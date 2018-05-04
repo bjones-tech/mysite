@@ -13,4 +13,5 @@ def about(request):
 
 
 def contact(request):
-    return render(request, 'home/contact.html')
+    content_rows = get_list_or_404(ContentRow, page='CONTACT')
+    return render(request, 'home/contact.html', {'content_rows': content_rows})
