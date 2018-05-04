@@ -44,7 +44,7 @@
                 </div>
             </div>
             <div class="col-md-3">
-                <h4 class="mt-5 mb-4">Tag Filter
+                <h4 class="mt-5 mb-4 text-secondary">Tag Filter
                     <a href="{% url 'portfolio:index' %}" class="btn btn-sm btn-link float-right">Clear</a></h4>
                 <div class="list-group">
                     {% for tag in tags|dictsortreversed:"count" %}
@@ -55,7 +55,7 @@
                             {% else %}
                                 <a href="{% url 'portfolio:filtered_index' tag.id %}" class="list-group-item text-dark">
                             {% endif %}
-                        <span>{{ tag }}</span>
+                        <span class="text-secondary">{{ tag }}</span>
                         <span class="badge badge-pill badge-secondary float-right">{{ tag.count }}</span>
                         </a>
                         {% endif %}
