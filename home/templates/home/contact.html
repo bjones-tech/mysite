@@ -17,20 +17,11 @@
         </div>
     </div>
 
-    {% with email_alias="brian" email_domain="bjones.tech" %}
-        <div class="container">
+    <div class="container">
+        {% for content_row in content_rows %}
             <div class="row">
-                <div class="col-8 offset-2">
-                    <h2 class="text-dark text-center p-4" style="font-weight: 600;">
-                        {{ email_alias }}<i class="fas fa-at text-info"></i>{{ email_domain }}
-                    </h2>
-                </div>
+                {{ content_row.content|safe }}
             </div>
-            {% for content_row in content_rows %}
-                <div class="row">
-                    {{ content_row.content|safe }}
-                </div>
-            {% endfor %}
-        </div>
-    {% endwith %}
+        {% endfor %}
+    </div>
 {% endblock %}
