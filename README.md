@@ -16,6 +16,8 @@ Please visit at [http://www.bjones.tech](http://www.bjones.tech)
 * Portfolio content management
 * Blog content management
 * Image files management
+* About content management
+* Contact content management
 * Create and edit content using rich text editor
 * Protected from brute force login attempts
 

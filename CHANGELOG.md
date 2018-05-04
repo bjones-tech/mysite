@@ -1,8 +1,8 @@
 ## Changelog
 
-#### Unreleased
+#### 8.0.0
 
-* About content management
+* `Added` ContentRow management for About and Contact pages
 
 #### 7.0.0
 
