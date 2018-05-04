@@ -4,6 +4,24 @@ from django.dispatch import receiver
 from django.utils.html import format_html
 
 
+class ContentRow(models.Model):
+    PAGE_CHOICES = (
+        ('ABOUT', 'About'),
+        ('CONTACT', 'Contact'),
+    )
+
+    description = models.CharField(max_length=200)
+    content = models.TextField()
+    page = models.CharField(max_length=200, choices=PAGE_CHOICES, default='ABOUT')
+    priority = models.IntegerField()
+
+    def __str__(self):
+        return self.description
+
+    class Meta:
+        ordering = ['-priority']
+
+
 class Image(models.Model):
     file = models.ImageField(upload_to='img/')
 

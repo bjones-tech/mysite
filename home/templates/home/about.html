@@ -18,12 +18,10 @@
     </div>
 
     <div class="container">
-        <div class="row">
-            <div class="col-8 offset-2">
-                <h4 class="text-dark text-left font-weight-light py-4">I take <span class="font-weight-bold">common</span> business <span class="font-weight-bold">processes</span></h4>
-                <h1 class="text-dark text-right font-weight-light py-4">and <span class="font-weight-bold">improve</span> them</h1>
-                <h2 class="text-dark text-center font-weight-light py-4">by adding <span class="font-weight-bold">ingredients</span> of <span class="font-weight-bold">automation</span></h2>
+        {% for content_row in content_rows %}
+            <div class="row">
+                {{ content_row.content|safe }}
             </div>
-        </div>
+        {% endfor %}
     </div>
 {% endblock %}

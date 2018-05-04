@@ -1,4 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_list_or_404
+
+from .models import ContentRow
 
 
 def index(request):
@@ -6,7 +8,8 @@ def index(request):
 
 
 def about(request):
-    return render(request, 'home/about.html')
+    content_rows = get_list_or_404(ContentRow, page='ABOUT')
+    return render(request, 'home/about.html', {'content_rows': content_rows})
 
 
 def contact(request):
