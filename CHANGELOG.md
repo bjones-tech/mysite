@@ -1,12 +1,17 @@
 ## Changelog
 
+#### 8.0.1
+
+* `Fixed` bug in contact view
+* `Updated` Tag Filter text to a lighter color
+
 #### 8.0.0
 
 * `Added` ContentRow management for About and Contact pages
 
 #### 7.0.0
 
-* `Added` Tag filter for portfolio page
+* `Added` Tag Filter for portfolio page
 
 #### 6.0.0
 
